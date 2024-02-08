@@ -1,5 +1,11 @@
 @use './partials/variables' as *;
+@use './partials/mixins' as *;
 
 border {
     border: $border-dashed-red;
+}
+
+.card {
+    background: red;
+    @include center;
 }
