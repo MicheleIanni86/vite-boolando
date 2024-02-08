@@ -1,7 +1,41 @@
 <script>
+
 export default {
   data() {
     return {
+        categories: [
+            {
+                name: 'Donna',
+                url: '#',
+                current: false
+            },
+            {
+                name: 'Uomo',
+                url: '#',
+                current: false
+            },
+            {
+                name: 'Bambini',
+                url: '#',
+                current: false
+            },
+
+        ],
+        actionUser: [
+            {
+                logo: 'fa-regular fa-user',  
+                url: '#'
+            },
+            {
+                logo: 'fa-regular fa-heart',  
+                url: '#'
+            },
+            {
+                logo: 'fa-solid fa-bag-shopping',  
+                url: '#'
+            },
+            
+        ]
      }
   }
 }
@@ -9,9 +43,37 @@ export default {
 
 
 <template>
-    <header>Header Part</header>
+
+
+    
+    <header class="setHeader">
+        
+        <div class="setHeaderContainer">
+            
+                <ul class="setHeaderLeft">
+                    <li v-for="cat in categories"> {{ cat.name }}
+                    </li>
+                </ul>
+            
+            <div class="setHeaderCenter">
+                <img src="../assets/img/boolean-logo.png" alt="logo-boolean" class="setHeaderCenter">
+            </div>
+            
+            <div class="setHeaderRight">
+
+                <div v-for="action in actionUser"> 
+                    <a href="#"><i :class="action.logo"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+
 </template>
 
 
-<style>
+<style lang="scss">
+
+
 </style>

@@ -1,5 +1,41 @@
-@mixin center {
+// ------GENERIC MIXIN-----
+
+
+// --------------header----------------------
+@mixin setHeader {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #ff6900;
     display: flex;
     justify-content: center;
-    align-items: center;
+    z-index: 1;
 }
+
+@mixin setHeaderContainer {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 72%;
+}
+
+@mixin setHeaderLeft {
+    width: 200px;
+    font-weight: 600;
+    word-spacing: 10px;
+}
+
+@mixin setHeaderCenter {
+    height: 40px
+}
+
+@mixin setHeaderRight {
+    display: flex;
+    width: 200px;
+    word-spacing: 6px;
+    gap: 10px;
+}
+// ---------------------------------------
+
+

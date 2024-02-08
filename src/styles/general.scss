@@ -1,11 +1,39 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-border {
-    border: $border-dashed-red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
 }
 
-.card {
-    background: red;
-    @include center;
+ul {
+    list-style: none;
 }
+
+// HEADER---------------------------
+.setHeader {
+    @include setHeader;
+}
+
+.setHeaderContainer {
+@include setHeaderContainer;
+}
+
+.setHeaderLeft{
+    @include setHeaderLeft;
+    display: flex;
+    gap: 25px;
+}
+
+.setHeaderCenter {
+    @include setHeaderCenter;
+}
+
+.setHeaderRight {
+    @include setHeaderRight;
+    color: white;
+}
+// ----------------------------------
+    
