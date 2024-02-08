@@ -32,9 +32,10 @@
 
 @mixin setHeaderRight {
     display: flex;
+    justify-content: end;
     width: 200px;
     word-spacing: 6px;
-    gap: 10px;
+    gap: 25px;
 }
 // ---------------------------------------
 

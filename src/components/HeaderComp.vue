@@ -51,7 +51,7 @@ export default {
         <div class="setHeaderContainer">
             
                 <ul class="setHeaderLeft">
-                    <li v-for="cat in categories"> {{ cat.name }}
+                    <li v-for="cat in categories"><a href="">{{ cat.name }}</a> 
                     </li>
                 </ul>
             
@@ -73,7 +73,11 @@ export default {
 </template>
 
 
-<style lang="scss">
-
+<style scoped>
+ul,li {
+    list-style: none;
+    color: white;
+    
+}
 
 </style>
