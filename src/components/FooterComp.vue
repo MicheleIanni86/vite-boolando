@@ -35,4 +35,46 @@ export default {
 
 
 <style>
+/* FOOTER */
+.footer-info {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    background-color: #1a1a1a;
+    color: white;
+    justify-content: center;
+  
+  }
+  
+  .footer-conteiner {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+  
+  .footer-left {
+    width: 50%;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    width: 122px;
+    text-align: left;
+  }
+  
+  .info {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .loghi-social {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    margin-top: 7px;
+  }
+  
 </style>

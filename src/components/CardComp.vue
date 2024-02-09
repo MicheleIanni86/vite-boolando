@@ -1,60 +1,52 @@
 <script>
 export default {
   
-     props: {
-            img: String,
-            imgHover: String,
-            sales: String,
-            brand: String,
-            model: String,
+     props: 
+        {
+          item: Object,
         },
-  
+ 
 }
 </script>
 
 
 <template>
-<main class="main-contener">
+
+
+
+
+  
+  <div class="card">
+    <img :src="item.frontImage" :alt="item.brand" class="first-img">
+    <img :src="item.backImage" :alt="brand" class="first-img-b">
+    <p class="brand">{{ item.brand }}</p>
     
-    <div class="container-card">
-        <div class="card">
-            <img :src="img" :alt="model" class="first-img">
-            <img :src="imgHover" :alt="model" class="first-img-b">
-            <h3 class="model">{{ model }}</h3>
-            <p class="brand">{{ brand }}</p>
-            <p class="sales">{{ sales }}</p>
-            
-        </div>
-    </div>
-</main>
+    
+    <span class="percentual">{{ item.badges.value }}</span>
+    <span class="sostenibility">{{ item.badges[0].value }}</span>
+    
+    <p class="model">{{ item.name }}</p>
+    <p class="price">{{ item.price }}</p>
+  </div>
+
+
 </template>
 
 
 <style lang="scss" scoped>
 // inserire class della card
-.main-contener {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 1620px;
-
-}
-
-.container-card {
-  width: 1420px;
-  height: 1500px;
-  margin-top: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 45px;
-}
 .card {
   width: calc(100% / 3 - 40px);
   height: 635px;
   margin: 20px 20px;
   position: relative;
 }
+
+#old-price{
+text-decoration: line-through;
+color: black;
+}
+
 .brand{
 font-size: 12px;
 }
@@ -63,10 +55,18 @@ font-size: 12px;
   font-weight: bolder;
 }
 
+.price {
+  font-size: small;
+  font-weight: bold;
+  color: red;
+}
+
+
 .card > img {
   width: 100%;
   height: 100%;
 }
+
 
 .first-img-b{
   position: absolute;
@@ -75,13 +75,57 @@ font-size: 12px;
   display: none;
 }
 
+
 .card:hover .first-img-b {
   display: block;
 }
-.card {
-    width: calc(100% / 3 - 40px);
-    height: 635px;
-    margin: 20px 20px;
-    position: relative;
-  }
+
+/* SALES ETICHETTE */
+
+.sales {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  color: white;
+  padding: 3px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+.percentual {
+  display: inline-block;
+  margin: 3px;
+  background-color: red;
+  padding: 3px;
+}
+
+.sostenibility {
+  display: inline-block;
+  margin: 3px;
+  background-color: green;
+  padding: 3px;
+}
+
+
+/* HEARTS */
+
+.square-hearts {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+}
+
+
+.square-hearts:hover {
+  color:red;
+}
+
+
 </style>

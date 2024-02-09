@@ -1,9 +1,7 @@
 <script>
-import HeaderComp from './components/HeaderComp.vue';
+import HeaderComp from './components/HeaderComp.vue'; 
 import MainComp from './components/MainComp.vue'; 
 import FooterComp from './components/FooterComp.vue'; 
-
-
 
 
 
@@ -19,16 +17,18 @@ export default {
 
 
 <template>
- <HeaderComp></HeaderComp>
- 
- <MainComp></MainComp>
+ <h1>wee</h1>
+  <HeaderComp></HeaderComp>
 
- <FooterComp></FooterComp>
+  <!-- <MainComp></MainComp> -->
+
+  <FooterComp></FooterComp>
+
 
 </template>
 
 
-<style lang="scss" >
+<style lang="scss">
 @use './styles/general.scss';
 
 </style>
