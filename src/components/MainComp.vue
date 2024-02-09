@@ -117,42 +117,28 @@ components: { CardComp }
 
 
 <template>
-<main class="main-contener">
 
-    <div class="container-card">
+<div class="container mt-3">
 
-        <CardComp 
-        v-for="product in products"
+    
+    <div class="row">
+        
+        <div class="col-4 mb-5" v-for="product in products">
+            
+            <CardComp 
             :item="product"/>
-      
+            
+        </div>
+        
+        
     </div>
-
-
-</main>
+</div>
 </template>
 
 
 
 <style lang="scss" scoped>
 
-  /* MAIN */
-.main-contener {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 1620px;
-
-}
-
-.container-card {
-  width: 1420px;
-  height: 1500px;
-  margin-top: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 45px;
-}
 
 
 

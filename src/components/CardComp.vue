@@ -22,8 +22,7 @@ export default {
     <p class="brand">{{ item.brand }}</p>
     
     
-    <span class="percentual">{{ item.badges.value }}</span>
-    <span class="sostenibility">{{ item.badges[0].value }}</span>
+        <span class="sostenibility">{{ item.badges[0].value }}</span>
     
     <p class="model">{{ item.name }}</p>
     <p class="price">{{ item.price }}</p>
@@ -35,12 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 // inserire class della card
-.card {
-  width: calc(100% / 3 - 40px);
-  height: 635px;
-  margin: 20px 20px;
-  position: relative;
-}
+
 
 #old-price{
 text-decoration: line-through;
@@ -63,9 +57,8 @@ font-size: 12px;
 
 
 .card > img {
-  width: 100%;
-  height: 100%;
-}
+  max-width: 100%;
+  }
 
 
 .first-img-b{

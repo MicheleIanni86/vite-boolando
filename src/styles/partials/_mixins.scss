@@ -3,7 +3,8 @@
 
 // --------------header----------------------
 @mixin setHeader {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
     height: 70px;
     background-color: #ff6900;
@@ -13,7 +14,6 @@
 }
 
 @mixin setHeaderContainer {
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,8 @@
 @mixin setHeaderLeft {
     width: 200px;
     font-weight: 600;
-    word-spacing: 10px;
+    display: flex;
+    gap: 25px;
 }
 
 @mixin setHeaderCenter {
@@ -34,7 +35,6 @@
     display: flex;
     justify-content: end;
     width: 200px;
-    word-spacing: 6px;
     gap: 25px;
 }
 // ---------------------------------------

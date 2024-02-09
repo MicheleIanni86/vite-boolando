@@ -23,16 +23,7 @@
 }
 
 .setHeaderLeft{
-    @include setHeaderLeft;
-    display: flex;
-    gap: 25px;
-    
-}
-
-
-.setHeaderLeft a {
-   color:white;
-   text-decoration: none;
+    @include setHeaderLeft;  
 }
 
 .setHeaderCenter {
