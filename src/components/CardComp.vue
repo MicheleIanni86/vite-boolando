@@ -19,11 +19,13 @@ export default {
   <div class="card">
     <img :src="item.frontImage" :alt="item.brand" class="first-img">
     <img :src="item.backImage" :alt="brand" class="first-img-b">
-    <p class="brand">{{ item.brand }}</p>
-    
-    
-        <span class="sostenibility">{{ item.badges[0].value }}</span>
-    
+    <div class="square-hearts" :class="{ 'square-heartsRed' : item.isInFavorites === true }">&hearts;</div>
+
+    <div class="sales">
+      <span class="sostenibility">{{ item.badges[0].value }}</span>
+    </div>
+
+    <p class="brand">{{ item.brand }}</p>    
     <p class="model">{{ item.name }}</p>
     <p class="price">{{ item.price }}</p>
   </div>
@@ -34,6 +36,9 @@ export default {
 
 <style lang="scss" scoped>
 // inserire class della card
+.card {
+  position: relative;
+}
 
 
 #old-price{
@@ -42,15 +47,21 @@ color: black;
 }
 
 .brand{
-font-size: 12px;
+  padding-top: 10px;
+  margin-left: 15px;
+font-weight: bolder;
+font-size: 15px;
 }
 
 .model {
+  margin-left: 15px;
   font-weight: bolder;
+  font-size: 20px;
 }
 
 .price {
-  font-size: small;
+  margin-left: 15px;
+  font-size: smaller;
   font-weight: bold;
   color: red;
 }
@@ -77,8 +88,8 @@ font-size: 12px;
 
 .sales {
   position: absolute;
-  bottom: 50px;
-  left: 0;
+  bottom: 150px;
+  left: 5px;
   color: white;
   padding: 3px 0px;
   font-size: 14px;
@@ -116,7 +127,7 @@ font-size: 12px;
 }
 
 
-.square-hearts:hover {
+.square-heartsRed {
   color:red;
 }
 
