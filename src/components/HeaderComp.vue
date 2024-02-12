@@ -38,7 +38,6 @@ export default {
             
         ],
 
-        store,
      }
   }
 }
@@ -53,7 +52,6 @@ export default {
         
         <div class="setHeaderContainer">
 
-            <h3>{{  store.test }}</h3>
             
                 <ul class="setHeaderLeft m-0">
                     <li v-for="cat in categories"><a href="">{{ cat.name }}</a> 
