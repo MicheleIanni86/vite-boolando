@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store'
 import CardComp from './CardComp.vue';
 export default {
   data() {
@@ -107,6 +108,8 @@ export default {
             ],
         }
     ],
+
+    store,
 };
 },
 
@@ -122,7 +125,7 @@ components: { CardComp }
 
     
     <div class="row">
-        
+            <h3>{{ store.test }}</h3>        
         <div class="col-4 mb-5" v-for="product in products">
             
             <CardComp 

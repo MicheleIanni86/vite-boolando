@@ -22,7 +22,7 @@ export default {
     <div class="square-hearts" :class="{ 'square-heartsRed' : item.isInFavorites === true }">&hearts;</div>
 
     <div class="sales">
-      <span class="sostenibility">{{ item.badges[0].value }}</span>
+      <span class="sostenibility" :class="item.badges[0].type == 'discount' ? 'percentual' : '' ">{{ item.badges[0].value }}</span>
     </div>
 
     <p class="brand">{{ item.brand }}</p>    

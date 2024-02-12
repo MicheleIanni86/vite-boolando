@@ -1,4 +1,5 @@
 <script>
+import { store } from '../store'
 
 export default {
   data() {
@@ -35,7 +36,9 @@ export default {
                 url: '#'
             },
             
-        ]
+        ],
+
+        store,
      }
   }
 }
@@ -49,6 +52,8 @@ export default {
     <header class="setHeader">
         
         <div class="setHeaderContainer">
+
+            <h3>{{  store.test }}</h3>
             
                 <ul class="setHeaderLeft m-0">
                     <li v-for="cat in categories"><a href="">{{ cat.name }}</a> 
