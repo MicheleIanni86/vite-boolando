@@ -4,6 +4,7 @@ export default {
   props:
   {
     item: Object,
+    index: Number,
   },
 
   emits: ['card-open'],
@@ -13,7 +14,7 @@ export default {
 
 
 <template>
-  <div class="card" @click="$emit('card-open')">
+  <div class="card text-center" @click="$emit('card-open', index)">
     <img :src="item.frontImage" :alt="item.brand" class="first-img">
     <img :src="item.backImage" :alt="item.brand" class="first-img-b">
     <div class="square-hearts" :class="{ 'square-heartsRed': item.isInFavorites === true }">&hearts;</div>
@@ -25,7 +26,7 @@ export default {
 
     <p class="brand">{{ item.brand }}</p>
     <p class="model">{{ item.name }}</p>
-    <p class="price">{{ item.price }}</p>
+    <p class="price">{{ item.price }} €</p>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ export default {
 // inserire class della card
 .card {
   position: relative;
+  cursor: pointer;
 }
 
 
@@ -45,21 +47,24 @@ export default {
 .brand {
   padding-top: 10px;
   margin-left: 15px;
-  font-weight: bolder;
-  font-size: 15px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .model {
   margin-left: 15px;
-  font-weight: bolder;
-  font-size: 20px;
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 .price {
-  margin-left: 15px;
-  font-size: smaller;
-  font-weight: bold;
-  color: red;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 20px;
+  font-weight: lighter;
+  color: white;
+  background-color: brown;
+  border-radius: 15px;
 }
 
 

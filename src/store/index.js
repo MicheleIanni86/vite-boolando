@@ -6,6 +6,12 @@ export const store = reactive({
 
     modal: {
         show: false,
+        image: '',
+        imageB: '',
+        title: '',
+        model: '',
+        prezzo: '',
+        image: '',
     },
 
 });

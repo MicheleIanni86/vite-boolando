@@ -2,16 +2,11 @@
 import { store } from '../store';
 export default {
     data() {
-        return {
-            store
-
-
-        };
+        return { store };
     },
 
     methods: {
         ClosedCard() {
-
             store.modal.show = false;
         },
 
@@ -27,13 +22,16 @@ export default {
 <template>
     <div class="sfondo">
 
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="card card text-center">
+            <div class="imageModal">
+                <img :src="store.modal.image" class="card-img-top" :alt="store.modal.title">
+                <img :src="store.modal.imageB" class="card-img-top" :alt="store.modal.title">
+            </div>
             <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                <button class="btn btn-primary" @click="ClosedCard()">Chiudi</button>
+                <h5 class="card-title">{{ store.modal.title }}</h5>
+                <p class="card-text">{{ store.modal.model }}</p>
+                <p class="fw-bold text-red">{{ store.modal.prezzo }} €</p>
+                <button class="btn btn-warning" @click="ClosedCard()">Chiudi Card</button>
             </div>
         </div>
     </div>
@@ -42,8 +40,16 @@ export default {
 
 
 <style lang="scss" scoped>
+.card {
+    width: 480px;
+}
+
+.imageModal {
+    display: flex;
+}
+
 .sfondo {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     bottom: 0;
