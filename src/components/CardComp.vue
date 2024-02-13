@@ -18,7 +18,7 @@ export default {
   
   <div class="card">
     <img :src="item.frontImage" :alt="item.brand" class="first-img">
-    <img :src="item.backImage" :alt="brand" class="first-img-b">
+    <img :src="item.backImage" :alt="item.brand" class="first-img-b">
     <div class="square-hearts" :class="{ 'square-heartsRed' : item.isInFavorites === true }">&hearts;</div>
 
     <div class="sales">
