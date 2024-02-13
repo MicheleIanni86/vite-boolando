@@ -1,46 +1,39 @@
 <script>
-
+import { store } from '../store';
 export default {
     data() {
         return {
-
+            store
 
 
         };
     },
 
+    methods: {
+        ClosedCard() {
+
+            store.modal.show = false;
+        },
 
 
-    created() {
+        created() {
 
+        },
     },
 };
-
 </script>
 
 
 <template>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
-    </button>
+    <div class="sfondo">
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+                <button class="btn btn-primary" @click="ClosedCard()">Chiudi</button>
             </div>
         </div>
     </div>
@@ -48,4 +41,16 @@ export default {
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.sfondo {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>

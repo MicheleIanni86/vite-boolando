@@ -1,36 +1,32 @@
 <script>
 export default {
-  
-     props: 
-        {
-          item: Object,
-        },
- 
-}
+
+  props:
+  {
+    item: Object,
+  },
+
+  emits: ['card-open'],
+
+};
 </script>
 
 
 <template>
-
-
-
-
-  
-  <div class="card">
+  <div class="card" @click="$emit('card-open')">
     <img :src="item.frontImage" :alt="item.brand" class="first-img">
     <img :src="item.backImage" :alt="item.brand" class="first-img-b">
-    <div class="square-hearts" :class="{ 'square-heartsRed' : item.isInFavorites === true }">&hearts;</div>
+    <div class="square-hearts" :class="{ 'square-heartsRed': item.isInFavorites === true }">&hearts;</div>
 
     <div class="sales">
-      <span class="sostenibility" :class="item.badges[0].type == 'discount' ? 'percentual' : '' ">{{ item.badges[0].value }}</span>
+      <span class="sostenibility" :class="item.badges[0].type == 'discount' ? 'percentual' : ''">{{ item.badges[0].value
+      }}</span>
     </div>
 
-    <p class="brand">{{ item.brand }}</p>    
+    <p class="brand">{{ item.brand }}</p>
     <p class="model">{{ item.name }}</p>
     <p class="price">{{ item.price }}</p>
   </div>
-
-
 </template>
 
 
@@ -41,16 +37,16 @@ export default {
 }
 
 
-#old-price{
-text-decoration: line-through;
-color: black;
+#old-price {
+  text-decoration: line-through;
+  color: black;
 }
 
-.brand{
+.brand {
   padding-top: 10px;
   margin-left: 15px;
-font-weight: bolder;
-font-size: 15px;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
 .model {
@@ -67,12 +63,12 @@ font-size: 15px;
 }
 
 
-.card > img {
+.card>img {
   max-width: 100%;
-  }
+}
 
 
-.first-img-b{
+.first-img-b {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,7 +90,7 @@ font-size: 15px;
   padding: 3px 0px;
   font-size: 14px;
   font-weight: bold;
-  
+
 }
 
 .percentual {
@@ -128,8 +124,6 @@ font-size: 15px;
 
 
 .square-heartsRed {
-  color:red;
+  color: red;
 }
-
-
 </style>
